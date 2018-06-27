@@ -16,7 +16,9 @@ def main():
 
 	ret=system("uptime")
 
-	slack = slackweb.Slack(url="https://hooks.slack.com/services/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")
+	url=system('cat /anykeydata/slack_mac13')
+
+	slack = slackweb.Slack(url=str(url))
 	slack.notify(text=str(ret))
 
 
